@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundapps"
+    tools:context=".MainActivity">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        style="@android:style/Widget.Material.CalendarView"
+        android:layout_width="451dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:dateTextAppearance="@style/CustomCalendarDay"
+        android:focusedMonthDateColor="@color/white"
+        android:minDate="01/01/2021"
+        android:scrollbarSize="1dp"
+        android:selectedDateVerticalBar="@color/black"
+        android:selectedWeekBackgroundColor="@color/black"
+        android:theme="@style/CustomCalendarMonth"
+        android:unfocusedMonthDateColor="@color/white"
+        android:weekDayTextAppearance="@style/CustomCalendarWeek"
+        android:weekNumberColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_breakfast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_breakfast"
+        android:layout_width="360dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="32dp"
+        android:background="#424242"
+        android:fontFamily="@font/mom_cake_bold"
+        android:paddingStart="100sp"
+        android:paddingTop="30sp"
+        android:text="breakfast"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+
+    <TextView
+        android:id="@+id/tv_lunch"
+        android:layout_width="360dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="32dp"
+        android:background="#616161"
+        android:fontFamily="@font/mom_cake_bold"
+        android:paddingStart="100sp"
+        android:paddingTop="30sp"
+        android:paddingBottom="0sp"
+        android:text="lunch"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_breakfast" />
+
+    <TextView
+        android:id="@+id/tv_dinner"
+        android:layout_width="360dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="32sp"
+        android:background="#757575"
+        android:fontFamily="@font/mom_cake_bold"
+        android:paddingStart="100sp"
+        android:paddingTop="25sp"
+        android:paddingBottom="0sp"
+        android:text="dinner"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lunch" />
+
+    <Button
+        android:id="@+id/btn_add_to_grocery"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/brookline"
+        android:text="add to grocery"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:theme="@style/ButtonColor"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dinner" />
+
+    <Button
+        android:id="@+id/btn_recipe2"
+        android:layout_width="59dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:alpha="0.7"
+        android:background="@android:drawable/ic_input_add"
+        android:theme="@style/ButtonColor"
+        app:layout_constraintEnd_toEndOf="@+id/tv_breakfast"
+        app:layout_constraintTop_toTopOf="@+id/tv_breakfast" />
+
+    <Button
+        android:id="@+id/btn_recipe3"
+        android:layout_width="59dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:alpha="0.7"
+        android:background="@android:drawable/ic_input_add"
+        android:theme="@style/ButtonColor"
+        app:layout_constraintEnd_toEndOf="@+id/tv_lunch"
+        app:layout_constraintTop_toTopOf="@+id/tv_lunch" />
+
+    <Button
+        android:id="@+id/btn_recipe4"
+        android:layout_width="59dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:alpha="0.7"
+        android:background="@android:drawable/ic_input_add"
+        android:theme="@style/ButtonColor"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dinner"
+        app:layout_constraintTop_toTopOf="@+id/tv_dinner" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_lunch"
+        app:layout_constraintTop_toTopOf="@+id/tv_lunch"
+        app:srcCompat="@drawable/ic_whats_new_vector" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_lunch"
+        app:layout_constraintTop_toTopOf="@+id/tv_lunch"
+        app:srcCompat="@drawable/ic_whats_new_vector" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="77dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_dinner"
+        app:layout_constraintTop_toTopOf="@+id/tv_dinner"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_breakfast"
+        app:layout_constraintTop_toTopOf="@+id/tv_breakfast"
+        app:srcCompat="@drawable/ic_breakfast_vector" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_breakfast"
+        app:layout_constraintTop_toTopOf="@+id/tv_breakfast"
+        app:srcCompat="@drawable/ic_breakfast_vector" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
